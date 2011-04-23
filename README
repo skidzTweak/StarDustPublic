@@ -12,6 +12,12 @@ DISCLAIMER/License Agreement - READ ME <<<<<<<<<<<<<<<<<<<<<<
 By using this module you agree that Skidz Tweak, Aurora-Sim, or other contributing developers are in no way responsable for any damages that may occure as a result of using this module.
 By using this module you agree that you understand the risks of running this module and are fully willing to except those risks and any consequences that may occure.
 
+=============================================================
+BETA INFO
+=============================================================
+* This has only been tested with mysql
+* This has only been tested on Windows 32Bit
+* This has only been tested in a grid config
 
 =============================================================
 How to set up StarDust Currency USER:
@@ -30,17 +36,20 @@ Grid Instance:
 	CurrencyHandler = StarDust
 [Currency]
 	Module = StarDust
-	
-3. Copy and edit the StarDust.ini into your AuroraServerConfiguration folder.
-4. Added the following to the bottom of your AuroraServer.ini File
+
+3. Change economy setting in GridInfoService.ini to point to your grid login uri.. 
+	Example: economy = http://127.0.0.1:8002/
+	Ensure slash is on the end
+4. Copy and edit the StarDust.ini into your AuroraServerConfiguration folder.
+5. Added the following to the bottom of your AuroraServer.ini File
 	Include-Currency = AuroraServerConfiguration/StarDust.ini
-5. Copy the WebUI Folder Content into your WebUI folder. Some files will be over writen.
-6. Edit the settings/StarDust.php file
+6. Copy the WebUI Folder Content into your WebUI folder. Some files will be over writen.
+7. Edit the settings/StarDust.php file
 	Ensure you use the sandbox for testing
-7. Go through all the language files on your website and add the following to each for each corasponding file
+8. Go through all the language files on your website and add the following to each for each corasponding file
 	include('languages/additional/lang_en.php');
-8. Run the SQL files that start with "ZZ" against your WebUI Database to add menu items.
-9. If you wish to sell regions as well edit the "SAMPLE" sql file and run it.
+9. Run the SQL files that start with "ZZ" against your WebUI Database to add menu items.
+10. If you wish to sell regions as well edit the "SAMPLE" sql file and run it.
 	
 Region Instance:
 1. Copy the "bin" folder and paste it into your Aurora-Sim Folder
@@ -74,17 +83,20 @@ Grid Instance:
 	CurrencyHandler = StarDust
 [Currency]
 	Module = StarDust
-	
-3. Copy and edit the StarDust.ini into your AuroraServerConfiguration folder.
-4. Added the following to the bottom of your AuroraServer.ini File
+
+3. Change economy setting in GridInfoService.ini to point to your grid login uri.. 
+	Example: economy = http://127.0.0.1:8002/
+	Ensure slash is on the end	
+4. Copy and edit the StarDust.ini into your AuroraServerConfiguration folder.
+5. Added the following to the bottom of your AuroraServer.ini File
 	Include-Currency = AuroraServerConfiguration/StarDust.ini
-5. Copy the WebUI Folder Content into your WebUI folder. Some files will be over writen.
-6. Edit the settings/StarDust.php file
+6. Copy the WebUI Folder Content into your WebUI folder. Some files will be over writen.
+7. Edit the settings/StarDust.php file
 	Ensure you use the sandbox for testing
-7. Go through all the language files on your website and add the following to each for each corasponding file
+8. Go through all the language files on your website and add the following to each for each corasponding file
 	include('languages/additional/lang_en.php');
-8. Run the SQL files that start with "ZZ" against your WebUI Database to add menu items.
-9. If you wish to sell regions as well edit the "SAMPLE" sql file and run it.
+9. Run the SQL files that start with "ZZ" against your WebUI Database to add menu items.
+10. If you wish to sell regions as well edit the "SAMPLE" sql file and run it.
 
 Region Instance:
 1. Copy the addon-modules folder and paste it into your Aurora-Sim Folder
