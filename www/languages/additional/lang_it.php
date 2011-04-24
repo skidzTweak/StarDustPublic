@@ -1,29 +1,30 @@
 <?php
-$webui_menu_item_getregion='Buy Land';
+$webui_menu_item_getregion='Acquista Terra';
 
-$webui_menu_item_getcurrency='Buy G$';
-$webui_menu_item_getcurrencyhistory='Hisotry';
-$webui_menu_item_currencytransfer='Transfer';
+$webui_menu_item_getcurrency='Acquista D$';
+$webui_menu_item_getcurrencyhistory='Estratto conto';
+$webui_menu_item_currencytransfer='Trasferisci';
 
-$site_not_a_member='Not a member?';
-$site_sign_up_today='Crea il tuo account GRATIS in queste pagine.';
+$site_not_a_member='Non hai un account?';
+$site_sign_up_today='Crea il tuo account gratis proprio qui in queste pagine.';
 
 $site_sign_up_benifit='
-<ul><li>Large wonderful world with friendly people</li>
-<li>Security is a top priority</li>
-<li>Choose your default avatar when you sign up</li>
-<li>Latest physics engine</li>
-<li>Over 100 Regions</li>
-<li>Currency compatible with lindens and us and euros</li>
-<li>No purchase fee</li>
-<li>No set up fee</li>
-<li>The worlds only virtual 3D dating environment</li>
-<li>You can keep you sl name and  identity</li>
-<li>Friendly personal owners</li>
-<li>Kick ass administer and scripters</li>
+<ul><li>Un grande e meraviglioso mondo pieno di amici</li>
+<li>La sicurezza e la priorita maggiore</li>
+<li>Scegli il tuo avatar in fase di registrazione</li>
+<li>Ultimo physics engine</li>
+<li>Oltre 100 regioni</li>
+<li>Denaro trasferibile in L$ dollari ed euro</li>
+<li>Senza commissioni</li>
+<li>Senza spese iniziali</li>
+<li>L unico mondo 3D</li>
+<li>Puoi utilissare il tuo avatar di SL</li>
+<li>Proprietari amichevoli e gentili</li>
+<li>Tira un calcioa gli amministratori e agli sviluppatori</li>
 </ul>
 ';
 
-$site_terms_of_service_agree='I agree with the Terms of Service.';
-$ErrorMessagePurchaseAlreadyComplete = "This purchase has already been completed. If you have not seen the currency applied yet, please be patient, as it might be on hold.";
+$site_terms_of_service_agree='Accetto i Termini di Servizio.';
+$ErrorMessagePurchaseAlreadyComplete = "Questo acquisto e gia stato completato. Se ancora non vedi il tuo bilancio aggiornato, sii paziente, potrebbe essere necessario qualche minuto.";
 ?>
+
