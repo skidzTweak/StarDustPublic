@@ -32,7 +32,7 @@ Grid Instance:
 1. Copy the "bin" folder and paste it into your Aurora-Sim Folder
 2. Add the following to Main.ini in your AuroraServerConfiguration
 
-[Handlers]
+[Handlers] <-- Place under, don't actually add this
 	CurrencyHandler = StarDust
 [Currency]
 	Module = StarDust
@@ -55,7 +55,7 @@ Region Instance:
 1. Copy the "bin" folder and paste it into your Aurora-Sim Folder
 2. Add the following to Grid.ini
 
-[Handlers]
+[Handlers] <-- Place under, don't actually add this
 	CurrencyHandler = StarDust
 [Currency]
 	Module = StarDust
@@ -74,12 +74,13 @@ Set up Paypal Sandbox:
 		Make sure you add a bank account to the user
 3. Create a Token for purchase confirmation on your business test user
 	A. https://cms.paypal.com/us/cgi-bin/?cmd=_render-content&content_ID=developer/howto_html_paymentdatatransfer
+	B. Use http://localhost/index.php?page=paypalcomplete as the return url.. with your domain.. 
 
 Grid Instance:
 1. Copy the Addon-modules folder and paste it into your Aurora-Sim Folder
-2. Add the following to Grid.ini
+2. Add the following to Main.ini in your AuroraServerConfiguration
 
-[Handlers]
+[Handlers] <-- Place under, don't actually add this
 	CurrencyHandler = StarDust
 [Currency]
 	Module = StarDust
@@ -102,7 +103,7 @@ Region Instance:
 1. Copy the addon-modules folder and paste it into your Aurora-Sim Folder
 2. Add the following to Grid.ini
 
-[Handlers]
+[Handlers] <-- Place under, don't actually add this
 	CurrencyHandler = StarDust
 [Currency]
 	Module = StarDust
