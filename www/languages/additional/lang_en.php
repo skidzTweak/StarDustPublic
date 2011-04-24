@@ -1,8 +1,8 @@
 <?php
 $webui_menu_item_getregion='Buy Land';
 
-$webui_menu_item_getcurrency='Buy G$';
-$webui_menu_item_getcurrencyhistory='Hisotry';
+$webui_menu_item_getcurrency='Buy D$';
+$webui_menu_item_getcurrencyhistory='History';
 $webui_menu_item_currencytransfer='Transfer';
 
 $site_not_a_member='Not a member?';
