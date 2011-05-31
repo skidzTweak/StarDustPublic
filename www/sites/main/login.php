@@ -1,3 +1,6 @@
+<script language="javascript" type="text/javascript">
+	addEvent(window, "load", function() { document.getElementById("login_input").focus(); } );
+</script>
 <div id="content">
     <div id="ContentHeaderLeft"><h5><?= SYSNAME ?></h5></div>
     <div id="ContentHeaderCenter"></div>
