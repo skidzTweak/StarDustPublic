@@ -20,53 +20,16 @@ BETA INFO
 * This has only been tested in a grid config
 
 =============================================================
-How to set up StarDust Currency USER:
+How to set up StarDust Currency with Paypal:
 =============================================================
 
-Set up Paypal:
+Set up Paypal (Normal user setup):
 1. Sign up for https://www.paypal.com/
 2. Create a Token for purchase confirmation on your business test user
 	A. https://cms.paypal.com/us/cgi-bin/?cmd=_render-content&content_ID=developer/howto_html_paymentdatatransfer
-	B. Use http://localhost/index.php?page=paypalcomplete as the return url.. with your domain.. 
-Grid Instance:
-1. Copy the "bin" folder and paste it into your Aurora-Sim Folder
-2. Add the following to Main.ini in your AuroraServerConfiguration
+	B. Use http://localhost/index.php?page=paypalcomplete as the return url.. with your domain.. Set up Paypal Sandbox:
 
-[Handlers] <-- Place under, don't actually add this
-	CurrencyHandler = StarDust
-[Currency]
-	Module = StarDust
-
-3. Change economy setting in GridInfoService.ini to point to your grid login uri.. 
-	Example: economy = http://127.0.0.1:8002/
-	Ensure slash is on the end
-4. Copy and edit the StarDust.ini into your AuroraServerConfiguration folder.
-5. Added the following to the bottom of your AuroraServer.ini File
-	Include-Currency = AuroraServerConfiguration/StarDust.ini
-6. Copy the WebUI Folder Content into your WebUI folder. Some files will be over writen.
-7. Edit the settings/StarDust.php file
-	Ensure you use the sandbox for testing
-8. Go through all the language files on your website and add the following to each for each corasponding file
-	include('languages/additional/lang_en.php');
-9. Run the SQL files that start with "ZZ" against your WebUI Database to add menu items.
-10. If you wish to sell regions as well edit the "SAMPLE" sql file and run it.
-	
-Region Instance:
-1. Copy the "bin" folder and paste it into your Aurora-Sim Folder
-2. Add the following to Grid.ini
-
-[Handlers] <-- Place under, don't actually add this
-	CurrencyHandler = StarDust
-[Currency]
-	Module = StarDust
-
-3. Compile/Run
-
-=============================================================
-How to set up StarDust Currency DEVELOPERS:
-=============================================================
-
-Set up Paypal Sandbox:
+Set up Paypal (Testing/Development setup):
 1. Sign up for https://developer.paypal.com/
 2. Create Test accounts. Use preconfigured account. 
 	A. Make one Buisiness
@@ -76,36 +39,52 @@ Set up Paypal Sandbox:
 	A. https://cms.paypal.com/us/cgi-bin/?cmd=_render-content&content_ID=developer/howto_html_paymentdatatransfer
 	B. Use http://localhost/index.php?page=paypalcomplete as the return url.. with your domain.. 
 
+	
+==============================================================
+Setting up Aurora.Server for Stardust currency (grid mode)
+==============================================================
+	
 Grid Instance:
-1. Copy the Addon-modules folder and paste it into your Aurora-Sim Folder
-2. Add the following to Main.ini in your AuroraServerConfiguration
-
-[Handlers] <-- Place under, don't actually add this
-	CurrencyHandler = StarDust
-[Currency]
-	Module = StarDust
-
-3. Change economy setting in GridInfoService.ini to point to your grid login uri.. 
+1. Copy the "bin" folder and paste it into your Aurora-Sim Folder
+2. Change economy setting in GridInfoService.ini to point to your grid login uri.. 
 	Example: economy = http://127.0.0.1:8002/
-	Ensure slash is on the end	
-4. Copy and edit the StarDust.ini into your AuroraServerConfiguration folder.
-5. Added the following to the bottom of your AuroraServer.ini File
+	Ensure slash is on the end
+	
+	Also, uncomment (remove the ;;) and change
+	SendGridInfoToViewerOnLogin = true
+	
+	You can also change the 
+	CurrencySymbol
+	and 
+	RealCurrencySymbol
+	as well so that you have custom $ symbols for your currency.
+
+3. Copy and paste the StarDust.ini into your AuroraServerConfiguration/ folder (in the bin folder where Aurora.Server runs).
+4. Added the following to the bottom of your AuroraServer.ini File (in the bin folder where Aurora.Server runs)
 	Include-Currency = AuroraServerConfiguration/StarDust.ini
-6. Copy the WebUI Folder Content into your WebUI folder. Some files will be over writen.
-7. Edit the settings/StarDust.php file
-	Ensure you use the sandbox for testing
-8. Go through all the language files on your website and add the following to each for each corasponding file
-	include('languages/additional/lang_en.php');
-9. Run the SQL files that start with "ZZ" against your WebUI Database to add menu items.
-10. If you wish to sell regions as well edit the "SAMPLE" sql file and run it.
 
-Region Instance:
-1. Copy the addon-modules folder and paste it into your Aurora-Sim Folder
-2. Add the following to Grid.ini
+==============================================================
+Setting up region instances (in grid mode) for StarDust
+==============================================================
 
-[Handlers] <-- Place under, don't actually add this
-	CurrencyHandler = StarDust
+1. Copy the "bin" folder and paste it into your Aurora-Sim Folder
+2. Under Configuration/Modules/Economy.ini, change
 [Currency]
-	Module = StarDust
+    Module = BaseCurrency
 
-3. Compile/Run
+to
+
+[Currency]
+    Module = StarDust
+
+==============================================================
+Setting up WebUI for StarDust
+==============================================================
+
+1. Copy the WebUI Folder Content into your WebUI folder. Some files will be over writen.
+2. Edit the settings/StarDust.php file
+	Ensure you use the sandbox for testing
+3. Go through all the language files on your website and add the following to each for each corasponding file
+	include('languages/additional/lang_en.php');
+4. Run the SQL files that start with "ZZ" against your WebUI Database to add menu items.
+5. If you wish to sell regions as well edit the "SAMPLE" sql file and run it.
