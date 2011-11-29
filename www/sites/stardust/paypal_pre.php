@@ -10,7 +10,7 @@ if ($_GET[purchase_id] != "")
 if (!$_SESSION[USERID])
 {
 	$_SESSION[next_page] = 'getcurrency';
-	header("Location: Index.php?page=login&btn=webui_menu_item_login&next_page=prepaypal&purchase_id=$_SESSION[purchase_id]");
+	header("Location: index.php?page=login&btn=webui_menu_item_login&next_page=prepaypal&purchase_id=$_SESSION[purchase_id]");
 }
 
 if ($_SESSION[purchase_id] != '')
