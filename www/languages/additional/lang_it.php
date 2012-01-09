@@ -4,6 +4,8 @@ $webui_menu_item_getregion='Acquista Terra';
 $webui_menu_item_getcurrency='Acquista D$';
 $webui_menu_item_getcurrencyhistory='Estratto conto';
 $webui_menu_item_currencytransfer='Trasferisci';
+$webui_transactions_found='Operazioni trovato';
+$webui_transactions_list_info='Questo è un elenco delle vostre operazioni.';
 
 $site_not_a_member='Non hai un account?';
 $site_sign_up_today='Crea il tuo account gratis proprio qui in queste pagine.';
