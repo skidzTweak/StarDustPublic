@@ -16,7 +16,7 @@ if (!$_SESSION[USERID])
 if ($_SESSION[purchase_id] != '')
 {
 	$found = array();
-	$found[0] = json_encode(array('Method' => 'CheckPurchaseStatus', 'WebPassword' => md5(WEBUI_PASSWORD), 'purchase_id' => $_SESSION[purchase_id], 'principalId' => $_SESSION[USERID]));
+	$found[0] = json_encode(array('Method' => 'CheckPurchaseStatus', 'WebPassword' => md5(WIREDUX_PASSWORD), 'purchase_id' => $_SESSION[purchase_id], 'principalId' => $_SESSION[USERID]));
 	$do_post_requested = stardust_do_post_request($found);
 	$recieved = json_decode($do_post_requested);
 	
