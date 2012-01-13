@@ -2,8 +2,10 @@
 $webui_menu_item_getregion='Buy Land';
 
 $webui_menu_item_getcurrency='Buy G$';
-$webui_menu_item_getcurrencyhistory='Hisotry';
+$webui_menu_item_getcurrencyhistory='History';
 $webui_menu_item_currencytransfer='Transfer';
+$webui_transactions_found='Transactions found';
+$webui_transactions_list_info='This is a list of your transactions.';
 
 $site_not_a_member='Not a member?';
 $site_sign_up_today='Créez votre compte GRATUIT sur notre site.';

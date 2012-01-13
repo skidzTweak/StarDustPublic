@@ -1,4 +1,4 @@
 <?
-if (!$_SESSION[USERID]) header("Location: Index.php?page=Home");
+if (!$_SESSION[USERID]) header("Location: index.php?page=Home");
 ?>
 Coming Soon

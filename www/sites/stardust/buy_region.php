@@ -1,5 +1,5 @@
 <?
-if (!$_SESSION[USERID]) header("Location: Index.php?page=Home");
+if (!$_SESSION[USERID]) header("Location: index.php?page=Home");
 include("settings/stardust.php");
 
 
@@ -10,7 +10,7 @@ $DbLink2->query("SELECT PrincipalID FROM stardust_purchased WHERE RegionName = '
 
 if ($DbLink2->num_rows() + $DbLink3->num_rows() > 0)
 {
-	header("Location: Index.php?page=getregion&button_id=$_POST[button_id]&id=$_POST[id]&name=$_POST[name]&notes=$_POST[notes]&error=Name already in use");
+	header("Location: index.php?page=getregion&button_id=$_POST[button_id]&id=$_POST[id]&name=$_POST[name]&notes=$_POST[notes]&error=Name already in use");
 }
 else
 {

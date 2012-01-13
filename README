@@ -60,7 +60,7 @@ Grid Instance:
 	as well so that you have custom $ symbols for your currency.
 
 3. Copy and paste the StarDust.ini into your AuroraServerConfiguration/ folder (in the bin folder where Aurora.Server runs).
-4. Added the following to the bottom of your AuroraServer.ini File (in the bin folder where Aurora.Server runs)
+4. Add the following to the bottom of your AuroraServer.ini File (in the bin folder where Aurora.Server runs)
 	Include-Currency = AuroraServerConfiguration/StarDust.ini
 
 ==============================================================
