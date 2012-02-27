@@ -88,3 +88,19 @@ Setting up WebUI for StarDust
 	include('languages/additional/lang_en.php');
 4. Run the SQL files that start with "ZZ" against your WebUI Database to add menu items.
 5. If you wish to sell regions as well edit the "SAMPLE" sql file and run it.
+
+==============================================================
+Settings - Restrictions
+==============================================================
+
+Restrictions have been added to help reduce the chances of fraud.
+There are two basic types of restrictions:
+1) Restricts how much money can be spent after a purchase for X number of hours.
+2) Restricts how much currency can be purchased in X number of days.
+* RestrictMoneyHoursAfterPurchase - number of hours money is restricted after purchase
+* RestrictMoneyCanSpendAfterPurchase - amount of money they are allowed to spend in restriction
+* MaxAmountPurchaseDays - Max Amount purchase pieriod 
+* MaxAmountPurchase - Max amount of money they can purcahse
+
+Note: If the amount of money purchased is less than the amount they are allowed to spend after a purchase then only half the currency that was purchased can be spent for X number of hours.
+These restrictions will not effect any curreny they already have that is restion free already.
