@@ -1,13 +1,5 @@
-About StarDust
-- Offical Currency name is Dust
-- Startdust is a full featured Currency Module for Aurora-Sim
-- It has only been tested in a grid configuration
-- Uses Paypal for all transactions
-- Uses a banking avatar where all purchases of currency come from
-- Integration in with Web UI
-
 =============================================================
-TOS/License Agreement - READ ME <<<<<<<<<<<<<<<<<<<<<<
+DISCLAIMER/License Agreement - READ ME <<<<<<<<<<<<<<<<<<<<<<
 =============================================================
 Do not use this module in a production environment. 
 This module is for educational purposes only, and should not be used in a production environment!
@@ -17,11 +9,92 @@ By downing and using this module you are agreeing to the Terms of service listed
 If you do not agree with the above do not use this module.
 
 =============================================================
+About StarDust
+=============================================================
+* Offical Currency name is Dust
+* Startdust is a full featured Currency Module for Aurora-Sim
+* It has only been tested in a grid configuration
+* Can use Paypal for all transactions (if configured)
+* Uses a banking avatar where all purchases of currency come from
+* Integration with Aurora-WebUI
+
+=============================================================
 BETA INFO
 =============================================================
-* This has only been tested with mysql
-* This has only been tested on Windows 32Bit
-* This has only been tested in a grid config
+* This has only been tested with MySQL
+* This has only been tested on Windows 32 Bit
+* This has only been tested in a grid configuration
+
+==============================================================
+Settings - Restrictions
+==============================================================
+
+Restrictions have been added to help reduce the chances of fraud.
+There are two basic types of restrictions:
+1) Restricts how much money can be spent after a purchase for X number of hours.
+2) Restricts how much currency can be purchased in X number of days.
+* RestrictMoneyHoursAfterPurchase - number of hours money is restricted after purchase
+* RestrictMoneyCanSpendAfterPurchase - amount of money they are allowed to spend in restriction
+* MaxAmountPurchaseDays - Max Amount purchase pieriod 
+* MaxAmountPurchase - Max amount of money they can purcahse
+
+Note: If the amount of money purchased is less than the amount they are allowed to spend after a 
+        purchase then only half the currency that was purchased can be spent for X number of hours.
+These restrictions will not effect any curreny they already have that is restion free already.
+
+==============================================================
+==============================================================
+Setup
+==============================================================
+==============================================================
+	
+==============================================================
+Setting up Aurora.Server for Stardust currency (grid mode)
+==============================================================
+	
+Grid Instance:
+1. Copy the "bin" folder and paste it into your Aurora-Sim Folder
+2. Change economy setting in GridInfoService.ini to point to your grid login uri.. 
+	Example: economy = http://127.0.0.1:8002/
+	Ensure slash is on the end
+	
+	Also, uncomment (remove the ;;) and change
+	SendGridInfoToViewerOnLogin = true
+	
+	You can also change the 
+	CurrencySymbol
+	and 
+	RealCurrencySymbol
+	as well so that you have custom $ symbols for your currency.
+
+3. Copy and paste the StarDust.ini out of the "Configs" directory into your AuroraServerConfiguration/Modules folder 
+        (in the bin folder where Aurora.Server runs).
+
+==============================================================
+Setting up region instances (in grid mode) for StarDust
+==============================================================
+
+1. Copy the "bin" folder and paste it into your Aurora-Sim folder
+2. Copy the "Economy.ini" file out of the "Configs" folder and paste it into Configuration/Modules folder (in your Aurora-Sim folder)
+
+
+==============================================================
+Changing Money Amounts for users
+==============================================================
+To change money amounts for users, there are a few console commands available on Aurora.Server (if in grid mode, otherwise Aurora.exe)
+These commands are:
+
+money set - Will set the money a user has
+money add - Will add money to a user's account
+money get - Prints out the amount of money the user has
+
+Just type the command you want, and it will ask the rest of the questions and tell you when it is done.
+	
+=============================================================
+=============================================================
+Optional Components
+=============================================================
+=============================================================
 
 =============================================================
 How to set up StarDust Currency with Paypal:
@@ -43,43 +116,6 @@ Set up Paypal (Testing/Development setup):
 	A. https://cms.paypal.com/us/cgi-bin/?cmd=_render-content&content_ID=developer/howto_html_paymentdatatransfer
 	B. Use http://localhost/index.php?page=paypalcomplete as the return url.. with your domain.. 
 
-	
-==============================================================
-Setting up Aurora.Server for Stardust currency (grid mode)
-==============================================================
-	
-Grid Instance:
-1. Copy the "bin" folder and paste it into your Aurora-Sim Folder
-2. Change economy setting in GridInfoService.ini to point to your grid login uri.. 
-	Example: economy = http://127.0.0.1:8002/
-	Ensure slash is on the end
-	
-	Also, uncomment (remove the ;;) and change
-	SendGridInfoToViewerOnLogin = true
-	
-	You can also change the 
-	CurrencySymbol
-	and 
-	RealCurrencySymbol
-	as well so that you have custom $ symbols for your currency.
-
-3. Copy and paste the StarDust.ini into your AuroraServerConfiguration/ folder (in the bin folder where Aurora.Server runs).
-4. Add the following to the bottom of your AuroraServer.ini File (in the bin folder where Aurora.Server runs)
-	Include-Currency = AuroraServerConfiguration/StarDust.ini
-
-==============================================================
-Setting up region instances (in grid mode) for StarDust
-==============================================================
-
-1. Copy the "bin" folder and paste it into your Aurora-Sim Folder
-2. Under Configuration/Modules/Economy.ini, change
-[Currency]
-    Module = BaseCurrency
-
-to
-
-[Currency]
-    Module = StarDust
 
 ==============================================================
 Setting up WebUI for StarDust
@@ -92,19 +128,3 @@ Setting up WebUI for StarDust
 	include('languages/additional/lang_en.php');
 4. Run the SQL files that start with "ZZ" against your WebUI Database to add menu items.
 5. If you wish to sell regions as well edit the "SAMPLE" sql file and run it.
-
-==============================================================
-Settings - Restrictions
-==============================================================
-
-Restrictions have been added to help reduce the chances of fraud.
-There are two basic types of restrictions:
-1) Restricts how much money can be spent after a purchase for X number of hours.
-2) Restricts how much currency can be purchased in X number of days.
-* RestrictMoneyHoursAfterPurchase - number of hours money is restricted after purchase
-* RestrictMoneyCanSpendAfterPurchase - amount of money they are allowed to spend in restriction
-* MaxAmountPurchaseDays - Max Amount purchase pieriod 
-* MaxAmountPurchase - Max amount of money they can purcahse
-
-Note: If the amount of money purchased is less than the amount they are allowed to spend after a purchase then only half the currency that was purchased can be spent for X number of hours.
-These restrictions will not effect any curreny they already have that is restion free already.
